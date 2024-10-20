@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://mat/terrain.shader" type="Shader" id=1]
+
+
+[resource]
+render_priority = -128
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 1, 1, 1, 1 )
+shader_param/uv1_scale = Vector3( 1, 1, 1 )
+shader_param/uv1_offset = Vector3( 0, 0, 0 )
+shader_param/uv2_scale = Vector3( 0, 0, 0 )
+shader_param/uv2_offset = Vector3( 0, 0, 0 )
+shader_param/distance_fade_min = 0.0
+shader_param/distance_fade_max = 0.0
+shader_param/player_position = null
+shader_param/distance_color = Color( 0.423529, 0.486275, 0.823529, 1 )
+shader_param/color_saturation = 1.0

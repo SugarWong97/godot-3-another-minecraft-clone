@@ -1,0 +1,233 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ui/Dosis-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu.gd" type="Script" id=2]
+[ext_resource path="res://ui/BoxStyle.tres" type="StyleBox" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+outline_size = 2
+outline_color = Color( 0.321569, 0.129412, 0.207843, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+outline_size = 2
+outline_color = Color( 0.321569, 0.129412, 0.207843, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlackBackground" type="ColorRect" parent="."]
+margin_left = 0.358459
+margin_right = 1280.36
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="Button" parent="."]
+margin_left = 560.0
+margin_top = 678.0
+margin_right = 720.0
+margin_bottom = 698.0
+text = "Click to start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColumnLeft" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 483.0
+margin_top = 58.0
+margin_right = -663.0
+margin_bottom = 327.0
+grow_horizontal = 0
+theme = SubResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+text = "W A S D
+Shift
+Spacebar
+Left click
+Right click
+Mousewheel up
+Mousewheel down
+Alt+Enter
+R
+ESC"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColumnRight" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -620.0
+margin_top = 58.0
+margin_right = -496.0
+margin_bottom = 327.0
+theme = SubResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+text = "Move
+Sprint
+Jump
+Dig
+Add block
+Descend
+Ascend
+Toggle fullscreen
+Restart scene
+Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextOptions" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 440.0
+margin_top = 370.0
+margin_right = -664.0
+margin_bottom = 639.0
+grow_horizontal = 0
+theme = SubResource( 4 )
+custom_styles/normal = ExtResource( 3 )
+text = "FoV
+Mouse sensitivity
+View distance
+Chunk Size X
+Chunk Size Y
+Chunk Size Z
+Cave generation (slow)
+Occlude cave light (WIP)
+Fade distance blue
+Enable lighting"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionMouseSensitivity" type="LineEdit" parent="."]
+margin_left = 650.0
+margin_top = 399.0
+margin_right = 708.0
+margin_bottom = 423.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionViewDistance" type="LineEdit" parent="."]
+margin_left = 650.0
+margin_top = 426.0
+margin_right = 708.0
+margin_bottom = 450.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionChunkSizeX" type="LineEdit" parent="."]
+margin_left = 650.0
+margin_top = 453.0
+margin_right = 708.0
+margin_bottom = 477.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionFOV" type="LineEdit" parent="."]
+margin_left = 650.0
+margin_top = 372.0
+margin_right = 708.0
+margin_bottom = 396.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionChunkSizeY" type="LineEdit" parent="."]
+margin_left = 650.0
+margin_top = 480.0
+margin_right = 708.0
+margin_bottom = 504.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionChunkSizeZ" type="LineEdit" parent="."]
+margin_left = 650.0
+margin_top = 506.0
+margin_right = 708.0
+margin_bottom = 530.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionCaveGen" type="CheckBox" parent="."]
+margin_left = 646.0
+margin_top = 534.0
+margin_right = 670.0
+margin_bottom = 558.0
+rect_pivot_offset = Vector2( 24, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionOccludeCaveLight" type="CheckBox" parent="."]
+margin_left = 646.0
+margin_top = 561.0
+margin_right = 670.0
+margin_bottom = 585.0
+rect_pivot_offset = Vector2( 24, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionFadeDistanceBlue" type="CheckBox" parent="."]
+margin_left = 646.0
+margin_top = 589.0
+margin_right = 670.0
+margin_bottom = 613.0
+rect_pivot_offset = Vector2( 24, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionEnableLighting" type="CheckBox" parent="."]
+margin_left = 646.0
+margin_top = 616.0
+margin_right = 670.0
+margin_bottom = 640.0
+rect_pivot_offset = Vector2( 24, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="text_changed" from="OptionMouseSensitivity" to="." method="_on_OptionMouseSensitivity_text_changed"]
+[connection signal="text_changed" from="OptionViewDistance" to="." method="_on_OptionViewDistance_text_changed"]
+[connection signal="text_changed" from="OptionChunkSizeX" to="." method="_on_OptionChunkSizeX_text_changed"]
+[connection signal="text_changed" from="OptionFOV" to="." method="_on_OptionFOV_text_changed"]
+[connection signal="text_changed" from="OptionChunkSizeY" to="." method="_on_OptionChunkSizeY_text_changed"]
+[connection signal="text_changed" from="OptionChunkSizeZ" to="." method="_on_OptionChunkSizeZ_text_changed"]
+[connection signal="pressed" from="OptionCaveGen" to="." method="_on_OptionCaveGen_pressed"]
+[connection signal="pressed" from="OptionOccludeCaveLight" to="." method="_on_OptionOccludeCaveLight_pressed"]
+[connection signal="pressed" from="OptionFadeDistanceBlue" to="." method="_on_OptionFadeDistanceBlue_pressed"]
+[connection signal="pressed" from="OptionEnableLighting" to="." method="_on_OptionEnableLighting_pressed"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/Dosis-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ui/BoxStyle.tres" type="StyleBox" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+outline_size = 2
+outline_color = Color( 0.321569, 0.129412, 0.207843, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Menu" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -432.0
+margin_right = -640.0
+margin_bottom = -720.0
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = -260.0
+margin_top = 20.0
+margin_right = -21.0
+margin_bottom = 208.0
+grow_horizontal = 0
+theme = SubResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "Vsync
+[write number] Mouse sensitivity
+[tick box] Cave generation (slow)
+[tick box] View distance
+[write number] Chunk Size X
+[write number] Chunk Size Y
+[write number] Chunk Size Z"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 34.0
+margin_bottom = 44.0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

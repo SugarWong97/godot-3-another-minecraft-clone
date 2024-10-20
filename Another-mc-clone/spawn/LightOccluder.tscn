@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://mat/terrain.shader" type="Shader" id=1]
+[ext_resource path="res://scn/LightOccluder.gd" type="Script" id=2]
+
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ShaderMaterial" id=2]
+render_priority = -128
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 0, 0, 0, 1 )
+shader_param/uv1_scale = Vector3( 0, 0, 0 )
+shader_param/uv1_offset = Vector3( 0, 0, 0 )
+shader_param/uv2_scale = Vector3( 0, 0, 0 )
+shader_param/uv2_offset = Vector3( 0, 0, 0 )
+shader_param/distance_fade_min = 0.0
+shader_param/distance_fade_max = 0.0
+shader_param/player_position = null
+shader_param/distance_color = Color( 0, 0, 0, 1 )
+shader_param/color_saturation = 1.0
+
+[node name="LightOccluder" type="Spatial"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
+cast_shadow = 2
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
